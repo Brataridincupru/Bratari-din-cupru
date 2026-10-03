@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brățări din cupru</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1eb;
+            color: #333;
+        }
+
+        header {
+            background: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .produse {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px 20px;
+        }
+
+        .produs {
+            background: white;
+            width: 280px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .produs img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .pret {
+            font-size: 22px;
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .buton {
+            display: inline-block;
+            background: #8b4513;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Brățări din cupru</h1>
+    <p>Brățări din cupru realizate cu grijă și pasiune</p>
+</header>
+
+<section class="produse">
+
+    <div class="produs">
+        <img src="https://via.placeholder.com/280x200" alt="Brățară din cupru">
+        <h2>Brățară din cupru</h2>
+        <p>Brățară elegantă din cupru.</p>
+        <p class="pret">50 lei</p>
+        <a class="buton" href="#contact">Comandă</a>
+    </div>
+
+    <div class="produs">
+        <img src="https://via.placeholder.com/280x200" alt="Brățară din cupru">
+        <h2>Brățară model 2</h2>
+        <p>Model lucrat manual.</p>
+        <p class="pret">60 lei</p>
+        <a class="buton" href="#contact">Comandă</a>
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Pentru comenzi, contactează-ne:</p>
+    <p>Telefon: 07XX XXX XXX</p>
+    <p>Email: exemplu@email.com</p>
+</section>
+
+</body>
+</html>
