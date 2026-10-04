@@ -3,90 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Brățări din cupru</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f5f1ec;
+            font-family: Arial, sans-serif;
+            background: #f5f1eb;
             color: #333;
-            text-align: center;
         }
 
         header {
-            background: #8b5a2b;
+            background: #8b4513;
             color: white;
-            padding: 30px 20px;
+            text-align: center;
+            padding: 30px;
         }
 
-        h1 {
-            margin: 0 0 10px;
-            font-size: 36px;
+        header h1 {
+            margin: 0;
+            font-size: 40px;
         }
 
         header p {
-            margin: 8px;
             font-size: 18px;
+            margin-top: 10px;
         }
 
-        .galerie {
-            padding: 30px 20px;
+        .produse {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px 20px;
         }
 
-        .galerie img {
-            max-width: 90%;
-            width: 400px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        .produs {
+            background: white;
+            width: 280px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .produs img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .titlu-produs {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0 8px 0;
+            color: #333;
+        }
+
+        .comanda-tel {
+            font-size: 16px;
+            font-weight: bold;
+            color: #8b4513;
+            margin: 0;
         }
 
         .contact {
-            padding: 30px 20px;
-            background: white;
-        }
-
-        .contact h2 {
-            color: #8b5a2b;
-        }
-
-        .telefon {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        footer {
-            padding: 20px;
-            background: #8b5a2b;
+            text-align: center;
+            background: #333;
             color: white;
+            padding: 30px;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Brățări din cupru</h1>
-        <p>📞 0759 165 234</p>
-        <p>Brățări din cupru realizate cu grijă și pasiune</p>
-    </header>
+<header>
+    <h1>Brățări din cupru</h1>
+    <p>📞 0759 165 234</p>
+    <p>Brățări din cupru realizate manual</p>
+</header>
 
-    <section class="galerie">
-        <h2>Brățări din cupru</h2>
+<section class="produse">
 
-        <img src="floarea%20vietii%20gravat%20pe%20bratara%20de%20cupru.jpg"
-             alt="Brățară din cupru gravată cu Floarea Vieții">
-    </section>
+    <!-- PRODUS 1 -->
+    <div class="produs">
+        <img src="bratara cu sarma si tabla de cupru.jpg" alt="Bratara cu sarma si tabla de cupru 1">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>📞 Sună pentru informații:</p>
-        <p class="telefon">0759 165 234</p>
-    </section>
+    <!-- PRODUS 2 -->
+    <div class="produs">
+        <img src="bratara de cupru confectionata manual.jpg" alt="Bratara de cupru confectionata manual 2">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
 
-    <footer>
-        Brățări din cupru
-    </footer>
+    <!-- PRODUS 3 -->
+    <div class="produs">
+        <img src="bratara de cupru cu piatra verde.jpg" alt="Bratara de cupru cu piatra verde 3">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
+
+    <!-- PRODUS 4 -->
+    <div class="produs">
+        <img src="bratara de cupru cu simboluri reiki.jpg" alt="Bratara de cupru cu simboluri reiki 4">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
+
+    <!-- PRODUS 5 -->
+    <div class="produs">
+        <img src="bratara din cupru cu floarea vietii.jpg" alt="Bratara din cupru cu floarea vietii 5">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
+
+    <!-- PRODUS 6 -->
+    <div class="produs">
+        <img src="bratara si pandantiv de cupru.jpg" alt="Bratara si pandantiv de cupru 6">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
+
+    <!-- PRODUS 7 -->
+    <div class="produs">
+        <img src="bratari de cupru.jpg" alt="Bratari de cupru 7">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
+
+    <!-- PRODUS 8 -->
+    <div class="produs">
+        <img src="bratari si inele din cupru.jpg" alt="Bratari si inele din cupru 8">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
+
+    <!-- PRODUS 9 -->
+    <div class="produs">
+        <img src="floarea vietii gravata pe bratara de cupru.jpg" alt="Floarea vietii gravata pe bratara de cupru 9">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
+
+    <!-- PRODUS 10 -->
+    <div class="produs">
+        <img src="lupul dacic.jpg" alt="Lupul dacic 10">
+        <div class="titlu-produs">Brățară de cupru realizată manual</div>
+        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Pentru comenzi și informații:</p>
+    <p>Telefon: 0759 165 234</p>
+</section>
 
 </body>
 </html>
