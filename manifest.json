@@ -1,1 +1,21 @@
-
+{
+  "name": "Brățări din Cupru",
+  "short_name": "Brățări Cupru",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fdfbf7",
+  "theme_color": "#8b4513",
+  "description": "Brățări din cupru realizate manual. Comandă rapid prin WhatsApp sau telefon.",
+  "icons": [
+    {
+      "src": "poza1.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "poza1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
