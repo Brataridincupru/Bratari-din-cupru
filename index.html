@@ -3,77 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Brățări din cupru</title>
+    <title>Brățări din Cupru Realizate Manual</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f1eb;
-            color: #333;
+        :root {
+            --copper-primary: #b87333;
+            --copper-dark: #8b4513;
+            --whatsapp-green: #25d366;
+            --whatsapp-dark: #1da851;
+            --bg-light: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #2c2c2c;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        /* HEADER */
         header {
-            background: #8b4513;
+            background: linear-gradient(135deg, var(--copper-dark), var(--copper-primary));
             color: white;
             text-align: center;
-            padding: 30px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         header h1 {
             margin: 0;
-            font-size: 40px;
+            font-size: 2.3rem;
+            font-weight: 700;
         }
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
+        header .tagline {
+            font-size: 1.1rem;
+            margin-top: 8px;
+            opacity: 0.95;
         }
 
+        .phone-badge {
+            display: inline-block;
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+        }
+
+        .phone-badge a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* CONTAINER PRODUSE */
         .produse {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 25px;
-            padding: 40px 20px;
+            gap: 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 50px 20px;
         }
 
+        /* CARD PRODUS */
         .produs {
-            background: white;
+            background: var(--card-bg);
             width: 280px;
-            padding: 20px;
-            border-radius: 15px;
+            padding: 16px;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .produs:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
         }
 
         .produs img {
             width: 100%;
-            height: 220px;
+            height: 230px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 12px;
         }
 
         .titlu-produs {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 15px 0 8px 0;
-            color: #333;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 15px 0 10px 0;
+            color: var(--text-main);
         }
 
-        .comanda-tel {
-            font-size: 16px;
-            font-weight: bold;
-            color: #8b4513;
-            margin: 0;
+        /* BUTOANE COMANDĂ */
+        .butoane-actiune {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
         }
 
+        .btn-wa {
+            display: inline-block;
+            background-color: var(--whatsapp-green);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 10px 14px;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-wa:hover {
+            background-color: var(--whatsapp-dark);
+        }
+
+        .btn-tel {
+            display: inline-block;
+            background-color: #efefef;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-tel:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* BUTON FIX WHATSAPP ÎN COLȚ */
+        .floating-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.05);
+        }
+
+        /* CONTACT SECTION */
         .contact {
             text-align: center;
-            background: #333;
+            background: #222222;
             color: white;
-            padding: 30px;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .contact h2 {
+            margin-top: 0;
+            color: var(--copper-primary);
+        }
+
+        .contact a {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .produse {
+                padding: 30px 15px;
+            }
+            .produs {
+                width: 100%;
+                max-width: 320px;
+            }
         }
     </style>
 </head>
@@ -82,88 +215,125 @@
 
 <header>
     <h1>Brățări din cupru</h1>
-    <p>📞 0759 165 234</p>
-    <p>Brățări din cupru realizate manual</p>
+    <p class="tagline">Piese unice, realizate manual cu atenție la detalii</p>
+    <div class="phone-badge">
+        📞 <a href="tel:0759165234">0759 165 234</a>
+    </div>
 </header>
 
 <section class="produse">
 
     <!-- PRODUS 1 -->
     <div class="produs">
-        <img src="bratara cu sarma si tabla de cupru.jpg" alt="Bratara cu sarma si tabla de cupru 1">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza1.jpg" alt="Brățară din cupru Model 1">
+        <div class="titlu-produs">Brățară din cupru Model 1</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%201" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 2 -->
     <div class="produs">
-        <img src="bratara de cupru confectionata manual.jpg" alt="Bratara de cupru confectionata manual 2">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza2.jpg" alt="Brățară din cupru Model 2">
+        <div class="titlu-produs">Brățară din cupru Model 2</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%202" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 3 -->
     <div class="produs">
-        <img src="bratara de cupru cu piatra verde.jpg" alt="Bratara de cupru cu piatra verde 3">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza3.jpg" alt="Brățară din cupru Model 3">
+        <div class="titlu-produs">Brățară din cupru Model 3</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%203" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 4 -->
     <div class="produs">
-        <img src="bratara de cupru cu simboluri reiki.jpg" alt="Bratara de cupru cu simboluri reiki 4">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza4.jpg" alt="Brățară din cupru Model 4">
+        <div class="titlu-produs">Brățară din cupru Model 4</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%204" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 5 -->
     <div class="produs">
-        <img src="bratara din cupru cu floarea vietii.jpg" alt="Bratara din cupru cu floarea vietii 5">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza5.jpg" alt="Brățară din cupru Model 5">
+        <div class="titlu-produs">Brățară din cupru Model 5</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%205" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 6 -->
     <div class="produs">
-        <img src="bratara si pandantiv de cupru.jpg" alt="Bratara si pandantiv de cupru 6">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza6.jpg" alt="Brățară din cupru Model 6">
+        <div class="titlu-produs">Brățară din cupru Model 6</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%206" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 7 -->
     <div class="produs">
-        <img src="bratari de cupru.jpg" alt="Bratari de cupru 7">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza7.jpg" alt="Brățară din cupru Model 7">
+        <div class="titlu-produs">Brățară din cupru Model 7</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%207" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 8 -->
     <div class="produs">
-        <img src="bratari si inele din cupru.jpg" alt="Bratari si inele din cupru 8">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza8.jpg" alt="Brățară din cupru Model 8">
+        <div class="titlu-produs">Brățară din cupru Model 8</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%208" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 9 -->
     <div class="produs">
-        <img src="floarea vietii gravata pe bratara de cupru.jpg" alt="Floarea vietii gravata pe bratara de cupru 9">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza9.jpg" alt="Brățară din cupru Model 9">
+        <div class="titlu-produs">Brățară din cupru Model 9</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%209" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
     <!-- PRODUS 10 -->
     <div class="produs">
-        <img src="lupul dacic.jpg" alt="Lupul dacic 10">
-        <div class="titlu-produs">Brățară de cupru realizată manual</div>
-        <p class="comanda-tel">pentru comenzi tel: 0759.165.234</p>
+        <img src="poza10.jpg" alt="Brățară din cupru Model 10">
+        <div class="titlu-produs">Brățară din cupru Model 10</div>
+        <div class="butoane-actiune">
+            <a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20sa%20comand%20Bratara%20din%20cupru%20Modelul%2010" target="_blank" class="btn-wa">💬 Comandă pe WhatsApp</a>
+            <a href="tel:0759165234" class="btn-tel">📞 Apelează: 0759.165.234</a>
+        </div>
     </div>
 
 </section>
 
+<!-- BUTON FIX WHATSAPP -->
+<a href="https://wa.me/40759165234?text=Buna%20ziua!%20Doresc%20informatii%20despre%20bratarile%20din%20cupru." target="_blank" class="floating-wa">
+    💬 WhatsApp
+</a>
+
 <section class="contact" id="contact">
-    <h2>Contact</h2>
-    <p>Pentru comenzi și informații:</p>
-    <p>Telefon: 0759 165 234</p>
+    <h2>Comenzi & Detalii</h2>
+    <p>Comandă rapid prin WhatsApp sau telefon:</p>
+    <p><a href="tel:0759165234">📞 0759 165 234</a></p>
 </section>
 
 </body>
