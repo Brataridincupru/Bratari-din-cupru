@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brățări din Cupru Realizate Manual</title>
     
+    <!-- Legătură către Manifest PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8b4513">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -335,6 +340,17 @@
     <p>Comandă rapid prin WhatsApp sau telefon:</p>
     <p><a href="tel:0759165234">📞 0759 165 234</a></p>
 </section>
+
+<!-- SCRIPT PWA -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(reg => console.log('PWA înregistrat cu succes!'))
+        .catch(err => console.log('Eroare PWA:', err));
+    });
+  }
+</script>
 
 </body>
 </html>
